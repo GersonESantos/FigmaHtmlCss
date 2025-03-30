@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Variações de Input</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulário com Variações de Input</h1>
+    
+    <form>
+        <!-- Inputs básicos -->
+        <div class="input-group">
+            <label for="texto">Input Text (Padrão):</label>
+            <input type="text" id="texto" placeholder="Digite algo">
+        </div>
+
+        <div class="input-group">
+            <label for="senha">Input Password:</label>
+            <input type="password" id="senha" placeholder="Sua senha">
+        </div>
+
+        <div class="input-group">
+            <label for="email">Input Email:</label>
+            <input type="email" id="email" placeholder="seu@email.com">
+        </div>
+
+        <div class="input-group">
+            <label for="numero">Input Number:</label>
+            <input type="number" id="numero" min="0" max="100" step="5">
+        </div>
+
+        <div class="input-group">
+            <label for="telefone">Input Tel (Telefone):</label>
+            <input type="tel" id="telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+        </div>
+
+        <div class="input-group">
+            <label for="url">Input URL:</label>
+            <input type="url" id="url" placeholder="https://exemplo.com">
+        </div>
+
+        <div class="input-group">
+            <label for="data">Input Date:</label>
+            <input type="date" id="data">
+        </div>
+
+        <div class="input-group">
+            <label for="hora">Input Time:</label>
+            <input type="time" id="hora">
+        </div>
+
+        <div class="input-group">
+            <label for="cor">Input Color:</label>
+            <input type="color" id="cor" value="#ff0000">
+        </div>
+
+        <div class="input-group">
+            <label for="faixa">Input Range:</label>
+            <input type="range" id="faixa" min="0" max="100" value="50">
+            <span id="valorFaixa">50</span>
+        </div>
+
+        <!-- Inputs especiais -->
+        <div class="input-group">
+            <label for="arquivo">Input File:</label>
+            <input type="file" id="arquivo">
+        </div>
+
+        <div class="input-group">
+            <label for="pesquisa">Input Search:</label>
+            <input type="search" id="pesquisa" placeholder="Pesquisar...">
+        </div>
+
+        <div class="input-group">
+            <label for="oculto">Input Hidden (não visível):</label>
+            <input type="hidden" id="oculto" value="valor-secreto">
+            <small>(Este input não aparece no formulário)</small>
+        </div>
+
+        <!-- Checkbox e Radio -->
+        <fieldset>
+            <legend>Checkboxes:</legend>
+            <label><input type="checkbox" name="opcoes" value="1"> Opção 1</label><br>
+            <label><input type="checkbox" name="opcoes" value="2"> Opção 2</label><br>
+            <label><input type="checkbox" name="opcoes" value="3"> Opção 3</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Radio Buttons:</legend>
+            <label><input type="radio" name="genero" value="masculino"> Masculino</label><br>
+            <label><input type="radio" name="genero" value="feminino"> Feminino</label><br>
+            <label><input type="radio" name="genero" value="outro"> Outro</label>
+        </fieldset>
+
+        <!-- Outros elementos de formulário -->
+        <div class="input-group">
+            <label for="selecao">Select (Dropdown):</label>
+            <select id="selecao">
+                <option value="">Selecione...</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Opção 3</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="textarea">Textarea:</label>
+            <textarea id="textarea" rows="4"></textarea>
+        </div>
+
+        <!-- Botões -->
+        <div class="input-group">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+            <button type="button">Botão Comum</button>
+        </div>
+    </form>
+
+    <script>
+        // Atualiza o valor do range quando movido
+        document.getElementById('faixa').addEventListener('input', function() {
+            document.getElementById('valorFaixa').textContent = this.value;
+        });
+    </script>
+</body>
+</html>

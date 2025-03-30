@@ -1,0 +1,118 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos grupos de input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Estilo dos fieldsets */
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+button[type="button"] {
+    background-color: #28a745;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+/* Estilo do input range */
+#faixa {
+    width: calc(100% - 50px);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#valorFaixa {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Estilo do input file */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Estilo para mensagens pequenas */
+small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+}
